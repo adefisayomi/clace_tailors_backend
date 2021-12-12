@@ -9,7 +9,7 @@ const dbConnect = require('./utils/dbConnect')
 
 
 // middlewares
-app.use('*', cors({origin: ['https://tailor.devbyclace.com', 'http://localhost:3000', 'http://172.20.10.5:3000'],
+app.use('*', cors({origin: ['https://clace-tailors.vercel.app/', 'https://tailor.devbyclace.com', 'http://localhost:3000', 'http://172.20.10.5:3000'],
                          credentials: true,
                          methods: ['GET', 'PUT', 'POST', 'DELETE', 'PATCH'],
                          allowedHeaders: ['Content-Type', 'Authorization']}))
