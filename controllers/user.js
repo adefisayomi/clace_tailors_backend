@@ -15,7 +15,7 @@ async function createUser (payload, req, res) {
         
         // validate input
         const {value, error} = newUser.validate(payload)
-        if (error) throw new Error (error.message.replaceAll(/["]/g, ''))
+        if (error) throw new Error (error.message.replace(/["]/g, ''))
 
         // checkmultiple inputs
         const inUse = await multiple({email: value.email})
